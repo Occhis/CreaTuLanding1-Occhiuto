@@ -9,6 +9,7 @@ const NavBar = () => {
             <button>Accesorios</button> 
             <button>Electronica</button> 
             </div>
+            <div className="CardWidget"></div>
             <CardWidget />
         </nav>
     );

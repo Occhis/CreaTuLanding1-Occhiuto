@@ -5,6 +5,38 @@
   text-align: center;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  background: #242424;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #646cff;
+  letter-spacing: 2px;
+}
+
+nav div {
+  display: flex;
+  gap: 1rem;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +71,23 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.CardWidget {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.CardWidget img {
+  width: 32px;
+  height: 32px;
+}
+
+.ItemListContainer h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-top: 2rem;
+  text-align: center;
 }
