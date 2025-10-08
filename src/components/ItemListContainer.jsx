@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProducts, getProductsByCategory } from '../data/products';
+import { getProducts, getProductsByCategory } from '../data/Products';
 import ItemList from './ItemList';
 
 const ItemListContainer = ({ greeting }) => {
