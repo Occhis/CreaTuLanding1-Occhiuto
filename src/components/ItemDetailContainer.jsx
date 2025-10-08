@@ -52,7 +52,6 @@ const ItemDetailContainer = () => {
         );
     }
 
-    // Render normal cuando todo está bien
     return (
         <div className="ItemDetailContainer">
             <ItemDetail product={product} />
