@@ -11,7 +11,7 @@ const NavBar = () => {
             padding: '1rem 2rem'
         }}>
             <Link to="/">
-                <h3>Tienda Multifacética</h3>
+                <h3 className="logo-title">TIENDA MULTIFACÉTICA</h3>
             </Link>
             
             <div style={{ display: 'flex', gap: '1rem' }}>
@@ -22,7 +22,7 @@ const NavBar = () => {
                     <button>Accesorios</button>
                 </Link>
                 <Link to="/category/electronica">
-                    <button>Electronica</button>
+                    <button>Electrónica</button>
                 </Link>
             </div>
             

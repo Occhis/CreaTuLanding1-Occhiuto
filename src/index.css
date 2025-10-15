@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #15121c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,6 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.greeting-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #646cff;
+  letter-spacing: 1px;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -31,7 +38,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.3em;
   line-height: 1.1;
 }
 
@@ -39,10 +46,10 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 1.3rem;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-family: raleway, sans-serif;;
+  background-color: #131526;
   cursor: pointer;
   transition: border-color 0.25s;
 }

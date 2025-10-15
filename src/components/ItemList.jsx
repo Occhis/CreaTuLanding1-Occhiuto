@@ -5,7 +5,7 @@ const ItemList = ({ products }) => {
         <div className="ItemList" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-            gap: '2rem',
+            gap: '2.5rem',
             padding: '2rem',
             width: '100%'
         }}>
