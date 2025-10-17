@@ -29,10 +29,6 @@ const ItemDetail = ({ product }) => {
           ) : (
             <button className="btn-primary full-width">Finalizar compra</button>
           )}
-
-          <Link to="/" className="btn-secondary full-width">
-            ← Volver al catálogo
-          </Link>
         </div>
       </div>
     </div>
