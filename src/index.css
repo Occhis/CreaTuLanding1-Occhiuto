@@ -29,17 +29,6 @@ a:hover {
   color: #535bf2;
 }
 
-.a btn-secondary {
-   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1.3rem;
-  font-weight: 500;
-  font-family: raleway, sans-serif;;
-  background-color: #131526;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
 body {
   margin: 0;
   display: flex;

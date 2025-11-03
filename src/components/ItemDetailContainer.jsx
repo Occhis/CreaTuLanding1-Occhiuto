@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById } from '../data/Products';
 import ItemDetail from './ItemDetail';
 import ClipLoader from 'react-spinners/ClipLoader';
+import { db } from '../firebase/config'; 
+import { doc, getDoc } from 'firebase/firestore'; 
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
@@ -11,21 +12,31 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true);
-        console.log("Buscando producto ID:", itemId); // ← Debug
+
         
-        getProductById(itemId)
-            .then(data => {
-                console.log("Producto encontrado:", data); // ← Debug
-                setProduct(data);
-                setLoading(false);
+        const docRef = doc(db, 'products', itemId);
+
+        
+        getDoc(docRef)
+            .then(docSnap => {
+                if (docSnap.exists()) {
+                    console.log("Producto encontrado:", docSnap.data());
+                    setProduct({ id: docSnap.id, ...docSnap.data() });
+                } else {
+                    console.log("Producto no encontrado");
+                    setProduct(null); 
+                }
             })
             .catch(error => {
                 console.error('Error cargando producto:', error);
+            })
+            .finally(() => {
                 setLoading(false);
             });
+            
     }, [itemId]);
 
-    // Loading state
+    
     if (loading) {
         return (
             <div style={{ 
@@ -42,7 +53,7 @@ const ItemDetailContainer = () => {
         );
     }
 
-    // Si no encontró el producto
+    
     if (!product) {
         return (
             <div style={{ padding: '2rem', textAlign: 'center' }}>
